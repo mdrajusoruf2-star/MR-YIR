@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MR-YIR — Web Security</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.8;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #161b22;
+      border-bottom: 2px solid #2ea043;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #2ea043;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header a {
+      color: #e6edf3;
+      text-decoration: none;
+      background: #21262d;
+      padding: 8px 14px;
+      border-radius: 7px;
+    }
+
+    header a:hover {
+      background: #2ea043;
+      color: #0d1117;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .green {
+      color: #2ea043;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #a8b3c0;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      color: #2ea043;
+      margin: 18px 0 8px;
+    }
+
+    p,
+    li {
+      color: #b1bac4;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .safe {
+      border-left: 5px solid #2ea043;
+      background: #102016;
+    }
+
+    .warning {
+      border-left: 5px solid #f0ad4e;
+      background: #211b11;
+    }
+
+    .concept {
+      border-left: 5px solid #58a6ff;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2ea043;
+      color: white;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #238636;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 30px;
+      background: #161b22;
+      color: #8b949e;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MR-YIR</div>
+  <a href="index.html">← হোম</a>
+</header>
+
+<section class="hero">
+
+  <h1>🌐 <span class="green">Web Security</span></h1>
+
+  <p>
+    Web Application কীভাবে কাজ করে এবং সাধারণ নিরাপত্তা
+    দুর্বলতাগুলো কীভাবে বোঝা ও প্রতিরোধ করা যায়—এই মডিউলে
+    তার মৌলিক ধারণা শেখা হবে।
+  </p>
+
+</section>
+
+<main class="container">
+
+  <section class="card concept">
+
+    <h2>📚 Web Application Security কী?</h2>
+
+    <p>
+      Web Application Security হলো ওয়েবসাইট ও ওয়েব অ্যাপ্লিকেশনকে
+      অননুমোদিত প্রবেশ, তথ্য ফাঁস এবং বিভিন্ন ধরনের নিরাপত্তা
+      দুর্বলতা থেকে সুরক্ষিত রাখার প্রক্রিয়া।
+    </p>
+
+    <h3>🔐 নিরাপত্তার মূল লক্ষ্য</h3>
+
+    <ul>
+      <li>তথ্যের গোপনীয়তা রক্ষা করা</li>
+      <li>তথ্যের অখণ্ডতা বজায় রাখা</li>
+      <li>অনুমোদিত ব্যবহারকারীর জন্য সেবা সচল রাখা</li>
+      <li>ব্যবহারকারীর ইনপুট নিরাপদভাবে পরিচালনা করা</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>💉 SQL Injection কী?</h2>
+
+    <p>
+      SQL Injection হলো এমন একটি নিরাপত্তা দুর্বলতা যেখানে
+      অনিরাপদভাবে পরিচালিত user input database query-এর
+      অর্থ পরিবর্তন করতে পারে।
+    </p>
+
+    <h3>কেন ঝুঁকিপূর্ণ?</h3>
+
+    <ul>
+      <li>অননুমোদিত database তথ্য প্রকাশ হতে পারে</li>
+      <li>অ্যাপ্লিকেশনের data integrity ক্ষতিগ্রস্ত হতে পারে</li>
+      <li>অ্যাকাউন্ট authentication দুর্বল হতে পারে</li>
+    </ul>
+
+    <h3>🛡️ প্রতিরোধ</h3>
+
+    <ul>
+      <li>Parameterized Queries ব্যবহার করা</li>
+      <li>Prepared Statements ব্যবহার করা</li>
+      <li>Input validation করা</li>
+      <li>Database account-এ least privilege প্রয়োগ করা</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>📜 XSS কী?</h2>
+
+    <p>
+      Cross-Site Scripting বা XSS হলো এমন একটি দুর্বলতা যেখানে
+      অনিরাপদ user input ওয়েব পেজে সঠিকভাবে নিরাপদ না করে
+      প্রদর্শন করা হলে browser-এ অনাকাঙ্ক্ষিত script চালানোর
+      সুযোগ তৈরি হতে পারে।
+    </p>
+
+    <h3>🛡️ প্রতিরোধ</h3>
+
+    <ul>
+      <li>Output encoding ব্যবহার করা</li>
+      <li>Input validation করা</li>
+      <li>Content Security Policy ব্যবহার করা</li>
+      <li>সঠিকভাবে HTML escaping করা</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>💻 Command Injection কী?</h2>
+
+    <p>
+      Command Injection হলো এমন একটি দুর্বলতা যেখানে অ্যাপ্লিকেশন
+      user input-কে নিরাপদভাবে আলাদা না করে operating system command
+      তৈরিতে ব্যবহার করলে অনাকাঙ্ক্ষিত command execution-এর ঝুঁকি
+      তৈরি হতে পারে।
+    </p>
+
+    <h3>🛡️ প্রতিরোধ</h3>
+
+    <ul>
+      <li>সম্ভব হলে system command ব্যবহার এড়ানো</li>
+      <li>Allowlist ভিত্তিক input validation করা</li>
+      <li>নিরাপদ API ব্যবহার করা</li>
+      <li>অ্যাপ্লিকেশনকে কম privilege-এ চালানো</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card safe">
+
+    <h2>🧪 নিরাপদ Practice Lab</h2>
+
+    <p>
+      এই বিষয়গুলো বাস্তব ওয়েবসাইটে পরীক্ষা না করে
+      নিজের তৈরি lab বা অনুমোদিত training environment-এ শেখা উচিত।
+    </p>
+
+    <h3>আজকের অনুশীলন</h3>
+
+    <ul>
+      <li>SQL Injection-এর ধারণা নিজের ভাষায় লিখো।</li>
+      <li>XSS এবং Command Injection-এর পার্থক্য বোঝো।</li>
+      <li>প্রতিটি দুর্বলতার অন্তত ২টি প্রতিরোধ ব্যবস্থা লিখো।</li>
+      <li>নিজের local training lab-এর জন্য একটি নিরাপত্তা checklist তৈরি করো।</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card warning">
+
+    <h2>⚠️ গুরুত্বপূর্ণ নিয়ম</h2>
+
+    <p>
+      অনুমতি ছাড়া কোনো বাস্তব ওয়েবসাইটে SQL Injection, XSS,
+      Command Injection বা অন্য কোনো নিরাপত্তা পরীক্ষা করা বেআইনি
+      এবং ক্ষতিকর হতে পারে।
+    </p>
+
+    <p>
+      শুধুমাত্র নিজের অ্যাপ্লিকেশন, অনুমোদিত lab অথবা বৈধ
+      CTF/training environment ব্যবহার করো।
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>✅ আজকের শেখা</h2>
+
+    <ul>
+      <li>Web Application Security</li>
+      <li>SQL Injection-এর ধারণা ও প্রতিরোধ</li>
+      <li>XSS-এর ধারণা ও প্রতিরোধ</li>
+      <li>Command Injection-এর ধারণা ও প্রতিরোধ</li>
+      <li>নিরাপদ Practice Lab-এর গুরুত্ব</li>
+    </ul>
+
+    <a class="button" href="index.html">
+      ← কোর্সে ফিরে যান
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 MR-YIR — Ethical Hacking Learning</p>
+  <p>Learn ethically • Practice safely • Stay legal</p>
+</footer>
+
+</body>
+  </html>
