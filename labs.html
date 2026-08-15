@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MR-YIR — Practice Labs</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #161b22;
+      border-bottom: 2px solid #2ea043;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #2ea043;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .home {
+      color: #e6edf3;
+      text-decoration: none;
+      background: #21262d;
+      padding: 8px 14px;
+      border-radius: 7px;
+    }
+
+    .home:hover {
+      background: #2ea043;
+      color: #0d1117;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .green {
+      color: #2ea043;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: #a8b3c0;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .notice {
+      background: #102016;
+      border-left: 5px solid #2ea043;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .notice p {
+      color: #b1bac4;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .lab {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .lab:hover {
+      border-color: #2ea043;
+      transform: translateY(-4px);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .lab h2 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .lab p {
+      color: #a8b3c0;
+      margin-bottom: 15px;
+    }
+
+    .lab ul {
+      padding-left: 22px;
+      color: #b1bac4;
+      margin-bottom: 18px;
+    }
+
+    .lab li {
+      margin: 5px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2ea043;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #238636;
+    }
+
+    .coming {
+      display: inline-block;
+      background: #30363d;
+      color: #8b949e;
+      padding: 8px 14px;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+
+    .warning {
+      margin-top: 30px;
+      background: #211b11;
+      border-left: 5px solid #f0ad4e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .warning h2 {
+      color: #f0ad4e;
+      margin-bottom: 8px;
+    }
+
+    .warning p {
+      color: #b1bac4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 30px;
+      background: #161b22;
+      color: #8b949e;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .lab {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MR-YIR</div>
+
+  <a class="home" href="index.html">
+    ← হোম
+  </a>
+</header>
+
+
+<section class="hero">
+
+  <h1>🧪 <span class="green">Practice Labs</span></h1>
+
+  <p>
+    Ethical Hacking শেখার জন্য নিরাপদ ও অনুমোদিত
+    Practice Environment। নিজের Lab বা বৈধ Training Environment-এ
+    অনুশীলন করুন।
+  </p>
+
+</section>
+
+
+<main class="container">
+
+  <div class="notice">
+
+    <h2>🛡️ নিরাপদ অনুশীলন</h2>
+
+    <p>
+      এই Labs-এর উদ্দেশ্য হলো নিরাপদভাবে Cyber Security শেখা।
+      কোনো বাস্তব Website, Server, Account বা Network-এ
+      অনুমতি ছাড়া পরীক্ষা করবেন না।
+    </p>
+
+  </div>
+
+
+  <section class="grid">
+
+
+    <!-- Lab 1 -->
+
+    <div class="lab">
+
+      <div class="icon">🔎</div>
+
+      <h2>Reconnaissance Lab</h2>
+
+      <p>
+        Target সম্পর্কে তথ্য সংগ্রহ এবং Scope বোঝার
+        মৌলিক ধারণা অনুশীলন করুন।
+      </p>
+
+      <ul>
+        <li>OSINT ধারণা</li>
+        <li>Domain ও Subdomain ধারণা</li>
+        <li>Scope নির্ধারণ</li>
+        <li>Information Documentation</li>
+      </ul>
+
+      <a class="button" href="recon.html">
+        Lab খুলুন
+      </a>
+
+    </div>
+
+
+    <!-- Lab 2 -->
+
+    <div class="lab">
+
+      <div class="icon">🔎</div>
+
+      <h2>Scanning Lab</h2>
+
+      <p>
+        Network Port, Service এবং Enumeration-এর
+        মৌলিক ধারণা অনুশীলন করুন।
+      </p>
+
+      <ul>
+        <li>Port কী</li>
+        <li>Service কী</li>
+        <li>Scanning ধারণা</li>
+        <li>Enumeration ধারণা</li>
+      </ul>
+
+      <a class="button" href="scanning.html">
+        Lab খুলুন
+      </a>
+
+    </div>
+
+
+    <!-- Lab 3 -->
+
+    <div class="lab">
+
+      <div class="icon">🌐</div>
+
+      <h2>Web Security Lab</h2>
+
+      <p>
+        Web Application-এর সাধারণ নিরাপত্তা দুর্বলতা
+        এবং প্রতিরোধের ধারণা শিখুন।
+      </p>
+
+      <ul>
+        <li>SQL Injection ধারণা</li>
+        <li>XSS ধারণা</li>
+        <li>Command Injection ধারণা</li>
+        <li>Security Best Practices</li>
+      </ul>
+
+      <a class="button" href="web-security.html">
+        Lab খুলুন
+      </a>
+
+    </div>
+
+
+    <!-- Lab 4 -->
+
+    <div class="lab">
+
+      <div class="icon">🔐</div>
+
+      <h2>Password Security Lab</h2>
+
+      <p>
+        শক্তিশালী Password, Hashing, MFA এবং
+        Account Security সম্পর্কে অনুশীলন করুন।
+      </p>
+
+      <ul>
+        <li>Strong Password</li>
+        <li>Password Hashing</li>
+        <li>MFA</li>
+        <li>Password Protection</li>
+      </ul>
+
+      <a class="button" href="password-security.html">
+        Lab খুলুন
+      </a>
+
+    </div>
+
+
+    <!-- Lab 5 -->
+
+    <div class="lab">
+
+      <div class="icon">🛠️</div>
+
+      <h2>Metasploit Lab</h2>
+
+      <p>
+        Metasploit Framework-এর Module, Exploit ও
+        Payload-এর মৌলিক ধারণা শিখুন।
+      </p>
+
+      <ul>
+        <li>Framework ধারণা</li>
+        <li>Module</li>
+        <li>Exploit</li>
+        <li>Payload</li>
+      </ul>
+
+      <span class="coming">
+        শীঘ্রই আরও Lab
+      </span>
+
+    </div>
+
+
+    <!-- Lab 6 -->
+
+    <div class="lab">
+
+      <div class="icon">📋</div>
+
+      <h2>Reporting Lab</h2>
+
+      <p>
+        Security Assessment-এর ফলাফল বিশ্লেষণ এবং
+        Professional Security Report তৈরি করার অনুশীলন করুন।
+      </p>
+
+      <ul>
+        <li>Evidence Documentation</li>
+        <li>Severity</li>
+        <li>Impact</li>
+        <li>Remediation</li>
+      </ul>
+
+      <a class="button" href="post-exploitation.html">
+        Lab খুলুন
+      </a>
+
+    </div>
+
+
+  </section>
+
+
+  <section class="warning">
+
+    <h2>⚠️ Legal & Ethical Rule</h2>
+
+    <p>
+      সব ধরনের Security Testing শুধুমাত্র নিজের System,
+      অনুমোদিত Lab অথবা বৈধ CTF/Training Environment-এ করুন।
+      অন্যের System বা Account-এ অনুমতি ছাড়া পরীক্ষা করা বেআইনি।
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>© 2026 MR-YIR — Ethical Hacking Learning</p>
+
+  <p>
+    Learn Ethically • Practice Safely • Stay Legal
+  </p>
+
+</footer>
+
+</body>
+  </html>
