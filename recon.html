@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR-YIR — Reconnaissance</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #161b22;
+      border-bottom: 2px solid #2ea043;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2ea043;
+    }
+
+    .logo span {
+      color: #58a6ff;
+    }
+
+    header a {
+      color: #e6edf3;
+      text-decoration: none;
+      background: #21262d;
+      padding: 8px 14px;
+      border-radius: 6px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #2ea043;
+    }
+
+    .hero p {
+      color: #8b949e;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 25px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      color: #58a6ff;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #2ea043;
+      margin: 15px 0 8px;
+    }
+
+    .card p,
+    .card li {
+      color: #b1bac4;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    .warning {
+      border-left: 4px solid #d29922;
+      background: #1c1810;
+    }
+
+    .practice {
+      border-left: 4px solid #2ea043;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #161b22;
+      color: #8b949e;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">MR-<span>YIR</span></div>
+    <a href="index.html">← হোম</a>
+  </header>
+
+  <section class="hero">
+    <h1>🔎 <span>Reconnaissance</span></h1>
+    <p>
+      Ethical Hacking-এর প্রথম ধাপ। কোনো সিস্টেম পরীক্ষা করার আগে
+      অনুমোদিত পরিসরের মধ্যে তথ্য সংগ্রহ ও লক্ষ্য সম্পর্কে ধারণা তৈরি করা।
+    </p>
+  </section>
+
+  <section class="section">
+
+    <div class="card">
+      <h2>📚 Reconnaissance কী?</h2>
+      <p>
+        Reconnaissance হলো কোনো নিরাপত্তা পরীক্ষার আগে লক্ষ্য সম্পর্কে
+        প্রাসঙ্গিক তথ্য সংগ্রহের প্রক্রিয়া। একজন Ethical Hacker
+        প্রথমে কী পরীক্ষা করা যাবে এবং কী পরীক্ষা করা যাবে না—
+        সেটি নির্ধারণ করেন।
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🧠 দুই ধরনের Reconnaissance</h2>
+
+      <h3>1. Passive Reconnaissance</h3>
+      <p>
+        সরাসরি লক্ষ্য সিস্টেমে কোনো সক্রিয় পরীক্ষা না চালিয়ে
+        প্রকাশ্য ও অনুমোদিত তথ্য থেকে ধারণা তৈরি করা।
+      </p>
+
+      <h3>2. Active Reconnaissance</h3>
+      <p>
+        অনুমোদিত পরীক্ষার পরিবেশে লক্ষ্য সিস্টেমের সঙ্গে সরাসরি
+        যোগাযোগ করে তথ্য সংগ্রহ করা। এটি করার আগে অবশ্যই মালিকের
+        স্পষ্ট অনুমতি থাকতে হবে।
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ কী কী শিখবেন?</h2>
+      <ul>
+        <li>ডোমেইন ও DNS-এর মৌলিক ধারণা</li>
+        <li>IP address ও network-এর ধারণা</li>
+        <li>OSINT-এর মৌলিক ধারণা</li>
+        <li>সার্চ ইঞ্জিন ব্যবহার করে তথ্য খোঁজা</li>
+        <li>নিরাপদ ও অনুমোদিত ল্যাবে তথ্য সংগ্রহ</li>
+        <li>সংগৃহীত তথ্য কীভাবে নোট করতে হয়</li>
+      </ul>
+    </div>
+
+    <div class="card practice">
+      <h2>🧪 নিরাপদ প্র্যাকটিস</h2>
+      <p>
+        শেখার জন্য নিজের কম্পিউটার, নিজের তৈরি ল্যাব অথবা
+        অনুমোদিত Training Lab ব্যবহার করুন।
+      </p>
+
+      <h3>প্রথম অনুশীলন</h3>
+      <p>
+        একটি কাল্পনিক কোম্পানির জন্য নিচের তথ্যগুলো একটি নোটে লিখুন:
+      </p>
+
+      <ul>
+        <li>কোম্পানির নাম</li>
+        <li>ওয়েবসাইটের নাম</li>
+        <li>কোন তথ্য প্রকাশ্যে পাওয়া যায়</li>
+        <li>কোন তথ্য পরীক্ষা করার অনুমতি আছে</li>
+      </ul>
+    </div>
+
+    <div class="card warning">
+      <h2>⚠️ গুরুত্বপূর্ণ নিয়ম</h2>
+      <p>
+        অনুমতি ছাড়া কোনো বাস্তব ওয়েবসাইট, সার্ভার বা ব্যক্তিগত
+        অ্যাকাউন্ট স্ক্যান বা পরীক্ষা করবেন না। এই কোর্সের
+        প্র্যাকটিস শুধুমাত্র নিজের সিস্টেম বা অনুমোদিত ল্যাবে করুন।
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 MR-YIR — Ethical Hacking Learning</p>
+  </footer>
+
+</body>
+  </html>
