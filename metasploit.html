@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR-YIR — Metasploit Framework</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.8;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #161b22;
+      border-bottom: 2px solid #2ea043;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #2ea043;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header a {
+      color: #e6edf3;
+      text-decoration: none;
+      background: #21262d;
+      padding: 8px 14px;
+      border-radius: 7px;
+    }
+
+    header a:hover {
+      background: #2ea043;
+      color: #0d1117;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .green {
+      color: #2ea043;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #a8b3c0;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      color: #2ea043;
+      margin: 18px 0 8px;
+    }
+
+    p,
+    li {
+      color: #b1bac4;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .safe {
+      border-left: 5px solid #2ea043;
+      background: #102016;
+    }
+
+    .warning {
+      border-left: 5px solid #f0ad4e;
+      background: #211b11;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2ea043;
+      color: white;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #238636;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 30px;
+      background: #161b22;
+      color: #8b949e;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MR-YIR</div>
+  <a href="index.html">← হোম</a>
+</header>
+
+<section class="hero">
+
+  <h1>🛠️ <span class="green">Metasploit Framework</span></h1>
+
+  <p>
+    Metasploit কী, এর প্রধান ধারণাগুলো কী এবং
+    কীভাবে অনুমোদিত নিরাপত্তা ল্যাবে এটি সম্পর্কে শেখা যায়—
+    এই মডিউলে তার মৌলিক পরিচিতি দেওয়া হবে।
+  </p>
+
+</section>
+
+<main class="container">
+
+  <section class="card">
+
+    <h2>📚 Metasploit কী?</h2>
+
+    <p>
+      Metasploit হলো একটি বহুল ব্যবহৃত penetration testing এবং
+      security research framework। এটি নিরাপত্তা পেশাজীবীদের
+      অনুমোদিত পরিবেশে দুর্বলতা যাচাই ও গবেষণায় সাহায্য করে।
+    </p>
+
+    <h3>🎯 কী শেখা যাবে?</h3>
+
+    <ul>
+      <li>Framework-এর মৌলিক কাঠামো</li>
+      <li>Module কী</li>
+      <li>Exploit-এর ধারণা</li>
+      <li>Payload-এর ধারণা</li>
+      <li>Auxiliary ও অন্যান্য module-এর ধারণা</li>
+      <li>নিরাপদ Lab-এ security testing-এর workflow</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>🧩 Module কী?</h2>
+
+    <p>
+      Metasploit-এর বিভিন্ন কাজ আলাদা module-এর মাধ্যমে সংগঠিত থাকে।
+      প্রতিটি module নির্দিষ্ট ধরনের security testing বা research
+      কাজে ব্যবহৃত হতে পারে।
+    </p>
+
+    <h3>সাধারণ Module-এর ধরন</h3>
+
+    <ul>
+      <li>Exploit</li>
+      <li>Auxiliary</li>
+      <li>Payload</li>
+      <li>Post</li>
+      <li>Encoder</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>🎯 Exploit কী?</h2>
+
+    <p>
+      Exploit হলো কোনো নির্দিষ্ট software বা system-এর দুর্বলতাকে
+      কাজে লাগানোর জন্য তৈরি করা code বা technique।
+    </p>
+
+    <p>
+      Ethical Hacking-এ Exploit শুধুমাত্র অনুমোদিত system বা
+      training lab-এ নিরাপত্তা যাচাইয়ের জন্য ব্যবহার করা উচিত।
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>📦 Payload কী?</h2>
+
+    <p>
+      Payload হলো কোনো exploit সফল হওয়ার পরে নির্দিষ্ট কার্যক্রম
+      সম্পাদনের জন্য ব্যবহৃত অংশের ধারণা।
+    </p>
+
+    <p>
+      Payload-এর ধরন ও ব্যবহার বোঝার সময় নিরাপত্তা, অনুমতি এবং
+      পরীক্ষার Scope সবসময় বিবেচনা করতে হবে।
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>🔬 Security Testing Workflow</h2>
+
+    <ul>
+      <li>১. Scope ও অনুমতি নির্ধারণ</li>
+      <li>২. Lab বা Target Environment প্রস্তুত করা</li>
+      <li>৩. সম্ভাব্য দুর্বলতা সম্পর্কে তথ্য সংগ্রহ</li>
+      <li>৪. নিরাপদভাবে vulnerability যাচাই করা</li>
+      <li>৫. ফলাফল নথিভুক্ত করা</li>
+      <li>৬. Vulnerability কীভাবে ঠিক করা যায় তা নির্ধারণ করা</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card safe">
+
+    <h2>🧪 নিরাপদ Practice Lab</h2>
+
+    <p>
+      Metasploit শেখার জন্য নিজের Virtual Machine, intentionally
+      vulnerable training application অথবা অনুমোদিত CTF ব্যবহার করুন।
+    </p>
+
+    <h3>আজকের অনুশীলন</h3>
+
+    <ul>
+      <li>Metasploit Framework-এর উদ্দেশ্য নিজের ভাষায় লিখুন।</li>
+      <li>Exploit ও Payload-এর পার্থক্য বোঝার চেষ্টা করুন।</li>
+      <li>Module-এর বিভিন্ন ধরন নোট করুন।</li>
+      <li>একটি নিরাপদ penetration testing workflow তৈরি করুন।</li>
+    </ul>
+
+  </section>
+
+
+  <section class="card warning">
+
+    <h2>⚠️ গুরুত্বপূর্ণ নিয়ম</h2>
+
+    <p>
+      Metasploit শক্তিশালী security testing framework। অনুমতি ছাড়া
+      কোনো বাস্তব server, website, computer বা network-এ এটি ব্যবহার
+      করা যাবে না।
+    </p>
+
+    <p>
+      শুধুমাত্র নিজের Lab, অনুমোদিত Training Environment অথবা
+      বৈধ CTF-এ অনুশীলন করুন।
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>✅ আজকের শেখা</h2>
+
+    <ul>
+      <li>Metasploit Framework</li>
+      <li>Module</li>
+      <li>Exploit</li>
+      <li>Payload</li>
+      <li>Security Testing Workflow</li>
+      <li>নিরাপদ Practice-এর নিয়ম</li>
+    </ul>
+
+    <a class="button" href="index.html">
+      ← কোর্সে ফিরে যান
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 MR-YIR — Ethical Hacking Learning</p>
+  <p>Learn ethically • Practice safely • Stay legal</p>
+</footer>
+
+</body>
+  </html>
