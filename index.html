@@ -137,7 +137,7 @@
   <script>
     // মডিউল ডেটা
     const modules = [
-      { num: 1, title: 'রিকনেসান্স (Reconnaissance)', desc: 'Nmap, subdomain finder, OSINT — টার্গেট সম্পর্কে তথ্য সংগ্রহ।' },
+      { num: 1, title: 'রিকনেসান্স (Reconnaissance)', desc: 'Nmap, subdomain finder, OSINT — টার্গেট সম্পর্কে তথ্য সংগ্রহ।', link: 'recon.html' },
       { num: 2, title: 'স্ক্যানিং ও এনুমারেশন', desc: 'পোর্ট স্ক্যানিং, সার্ভিস ফিঙ্গারপ্রিন্টিং, দুর্বলতা চিহ্নিতকরণ।' },
       { num: 3, title: 'ওয়েব অ্যাপ্লিকেশন অ্যাটাক', desc: 'SQL Injection, XSS, Command Injection — হাতেকলমে শেখা।' },
       { num: 4, title: 'পাসওয়ার্ড অ্যাটাক', desc: 'ব্রুট-ফোর্স, ডিকশনারি অ্যাটাক, হ্যাশ ক্র্যাকিং (John the Ripper)।' },
@@ -146,14 +146,14 @@
     ];
 
     const grid = document.getElementById('moduleGrid');
-    modules.forEach(m => {
-      grid.innerHTML += `
-        <div class="card">
-          <div class="num">${m.num}</div>
-          <h3>${m.title}</h3>
-          <p>${m.desc}</p>
-        </div>`;
-    });
+  modules.forEach(m => {
+  grid.innerHTML += `
+    <div class="card" ${m.link ? `onclick="window.location.href='${m.link}'" style="cursor:pointer;"` : ''}>
+      <div class="num">${m.num}</div>
+      <h3>${m.title}</h3>
+      <p>${m.desc}</p>
+    </div>`;
+});
   </script>
 
 </body>
