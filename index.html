@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR-YIR — ইথিক্যাল হ্যাকিং শিখুন</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background: #161b22;
+      border-bottom: 2px solid #2ea043;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    .logo { font-size: 24px; font-weight: bold; color: #2ea043; letter-spacing: 1px; }
+    .logo span { color: #58a6ff; }
+    nav a {
+      color: #e6edf3;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    nav a:hover { background: #2ea043; color: #0d1117; }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    }
+    .hero h1 { font-size: 42px; margin-bottom: 15px; }
+    .hero h1 span { color: #2ea043; }
+    .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; color: #8b949e; }
+    .btn {
+      display: inline-block;
+      background: #2ea043;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #238636; transform: translateY(-2px); }
+
+    /* Sections */
+    .section { padding: 60px 30px; max-width: 1100px; margin: auto; }
+    .section h2 { font-size: 30px; margin-bottom: 10px; color: #58a6ff; }
+    .section > p { color: #8b949e; margin-bottom: 30px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 25px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .card:hover { border-color: #2ea043; transform: translateY(-5px); }
+    .card .num {
+      background: #2ea043;
+      color: #0d1117;
+      font-weight: bold;
+      width: 35px; height: 35px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 15px;
+    }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: #8b949e; font-size: 14px; }
+
+    /* Footer */
+    footer {
+      background: #161b22;
+      text-align: center;
+      padding: 25px;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+      margin-top: 40px;
+    }
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MR-<span>YIR</span></div>
+    <nav>
+      <a href="#modules">কোর্স</a>
+      <a href="#labs">ল্যাব</a>
+      <a href="#">লগইন</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>MR-<span>YIR</span> — ইথিক্যাল হ্যাকিং শেখার অ্যাডভেঞ্চার</h1>
+    <p>নতুনদের জন্য সম্পূর্ণ বাংলা কোর্স — রিকনেসান্স থেকে রিপোর্টিং পর্যন্ত। নিজের সিস্টেমে প্র্যাকটিস করুন, আইনি ও নৈতিকভাবে দক্ষ হোন।</p>
+    <a href="#modules" class="btn">শেখা শুরু করুন 🚀</a>
+  </section>
+
+  <section class="section" id="modules">
+    <h2>📚 কোর্স মডিউল</h2>
+    <p>প্রতিটি মডিউলে টিউটোরিয়াল + প্র্যাকটিস ল্যাব থাকবে। ধাপে ধাপে এগিয়ে যান।</p>
+    <div class="grid" id="moduleGrid">
+      <!-- JS দিয়ে মডিউল লোড হবে -->
+    </div>
+  </section>
+
+  <section class="section" id="labs">
+    <h2>🧪 প্র্যাকটিস ল্যাব (শীঘ্রই)</h2>
+    <p>এখানে যোগ হবে: SQL Injection, XSS, Command Injection — নিরাপদ প্র্যাকটিস এনভায়রনমেন্ট।</p>
+  </section>
+
+  <footer>
+    <p>⚠️ শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। অনুমতি ছাড়া কোনো সিস্টেমে হামলা বেআইনি।</p>
+    <p>© 2026 MR-YIR — <a href="#top">উপরে ফিরে যান</a></p>
+  </footer>
+
+  <script>
+    // মডিউল ডেটা
+    const modules = [
+      { num: 1, title: 'রিকনেসান্স (Reconnaissance)', desc: 'Nmap, subdomain finder, OSINT — টার্গেট সম্পর্কে তথ্য সংগ্রহ।' },
+      { num: 2, title: 'স্ক্যানিং ও এনুমারেশন', desc: 'পোর্ট স্ক্যানিং, সার্ভিস ফিঙ্গারপ্রিন্টিং, দুর্বলতা চিহ্নিতকরণ।' },
+      { num: 3, title: 'ওয়েব অ্যাপ্লিকেশন অ্যাটাক', desc: 'SQL Injection, XSS, Command Injection — হাতেকলমে শেখা।' },
+      { num: 4, title: 'পাসওয়ার্ড অ্যাটাক', desc: 'ব্রুট-ফোর্স, ডিকশনারি অ্যাটাক, হ্যাশ ক্র্যাকিং (John the Ripper)।' },
+      { num: 5, title: 'মেটাসপ্লয়েট ফ্রেমওয়ার্ক', desc: 'এক্সপ্লয়টেশন, payload তৈরি ও ব্যবহার, Msfvenom।' },
+      { num: 6, title: 'পোস্ট-এক্সপ্লয়টেশন ও রিপোর্টিং', desc: 'প্রিভিলেজ এসক্যালেশন, প্রমাণ সংগ্রহ, পেশাদার রিপোর্ট লেখা।' }
+    ];
+
+    const grid = document.getElementById('moduleGrid');
+    modules.forEach(m => {
+      grid.innerHTML += `
+        <div class="card">
+          <div class="num">${m.num}</div>
+          <h3>${m.title}</h3>
+          <p>${m.desc}</p>
+        </div>`;
+    });
+  </script>
+
+</body>
+</html>
